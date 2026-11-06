@@ -65,9 +65,21 @@ nav a:hover::after{width:100%}
 .hero{position:relative;background:var(--cream);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:auto -10% -55% auto;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(134,197,0,.14),transparent 65%)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;padding:70px 0 90px;align-items:start}
-.hero h1{font-size:clamp(40px,5.2vw,70px);color:var(--cocoa);margin:18px 0 22px}
-.hero h1 em{font-style:normal;color:var(--rust);position:relative;white-space:nowrap}
-.hero h1 em svg{position:absolute;left:0;bottom:-10px;width:100%;height:16px}
+.hx{color:var(--cocoa);margin:18px 0 26px;display:flex;flex-direction:column;gap:6px;position:relative}
+.hx .l1{font-family:'Figtree',sans-serif;font-weight:700;font-size:clamp(15px,1.4vw,19px);letter-spacing:.02em;display:flex;align-items:center;gap:14px;color:var(--brown)}
+.hx .l1::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--clay) 0 8px,transparent 8px 14px);max-width:140px}
+.hx .l2,.hx .l3{display:flex;align-items:center;gap:.22em;line-height:.98;white-space:nowrap}
+.hx .l2{font-size:clamp(58px,7.6vw,112px);color:var(--rust)}
+.hx .l3{font-size:clamp(44px,5.6vw,82px)}
+.hx .l3 .ol{color:transparent;-webkit-text-stroke:2px var(--cocoa)}
+.hx .amp{font-style:italic;color:var(--leaf-d)}
+.hx .pill{display:inline-block;height:.72em;aspect-ratio:2/1;border-radius:999px;overflow:hidden;border:4px solid #fff;box-shadow:0 14px 30px -14px rgba(61,26,11,.55);flex:0 0 auto;transform:rotate(-4deg)}
+.hx .pill.sq{aspect-ratio:1;border-radius:22px;transform:rotate(6deg);height:.85em}
+.hx .pill img{width:100%;height:100%;object-fit:cover}
+.hx .stamp{position:absolute;right:-6px;top:-34px;width:118px;height:118px;border-radius:50%;background:var(--leaf);color:var(--cocoa);display:grid;place-items:center;text-align:center;font-family:'Figtree';font-weight:800;font-size:12.5px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase;animation:spin 18s linear infinite;box-shadow:0 0 0 6px var(--cream),0 0 0 7px var(--leaf)}
+.hx .stamp .dot{display:none;font-style:normal}
+.hx .stamp b{display:block;font-family:'Young Serif',serif;font-weight:400;font-size:28px;letter-spacing:0;text-transform:none}
+@keyframes spin{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
 .hero p.lead{font-size:19px;color:var(--muted);max-width:540px}
 .trust-line{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 34px}
 .trust-line span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:var(--brown)}
@@ -277,6 +289,13 @@ footer a:hover{color:#fff}
 }
 @media(max-width:600px){
   body{font-size:16px}
+  .hx .stamp{position:relative;top:0;right:0;align-self:flex-start;width:auto;height:auto;border-radius:999px;padding:8px 18px;margin-top:14px;animation:none;font-size:11px;box-shadow:none}
+  .hx .stamp br{display:none}
+  .hx .stamp{white-space:nowrap}
+  .hx .stamp .dot{display:inline}
+  .hx .stamp b{display:inline;font-size:20px;margin-right:6px}
+  .hx .l1::after{display:none}
+  .hx .l3 .ol{-webkit-text-stroke:1.5px var(--cocoa)}
   .estimator{padding:26px 20px;position:relative;top:0}
   .room-panel .copy{grid-template-columns:1fr;padding:24px}
   .room-panel h3{font-size:25px}
@@ -329,14 +348,19 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div>
       <span class="eyebrow">Calgary &amp; Edmonton House Cleaning</span>
-      <h1>Best Home &amp; Maid Cleaning Services in <em>Calgary<svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M2 12 C 50 2, 120 2, 198 9" stroke="#86c500" stroke-width="5" fill="none" stroke-linecap="round"/></svg></em> and Edmonton</h1>
+      <h1 class="hx">
+        <span class="l1">Best Home &amp; Maid Cleaning Services in</span>
+        <span class="l2">Calgary <i class="pill"><img src="images/service-recurring-cleaning.jpg" alt=""></i></span>
+        <span class="l3"><i class="pill sq"><img src="images/service-one-time-cleaning.jpg" alt=""></i><span class="amp">&amp;</span> <span class="ol">Edmonton</span></span>
+        <span class="stamp"><span><b>$37</b>per hour<br><i class="dot">· </i>supplies incl.</span></span>
+      </h1>
       <p class="lead">Choose Cozy Home Maid for simple, trusted and the most convenient house cleaning services in Calgary and Edmonton.</p>
       <div class="trust-line">
         <span><i></i>Licensed</span><span><i></i>WCB/WSIB covered</span><span><i></i>Insured &amp; bonded</span><span><i></i>We bring our own products</span>
       </div>
       <div class="hero-photo">
         <div class="frame"><img src="images/hero-cozy-living-room.jpg" onerror="this.onerror=null;this.src='images/house-cleaning-regina.png'" alt="Freshly cleaned living room"></div>
-        <div class="tag"><b>From $37/hr</b>Regular residential cleaning</div>
+        <div class="tag"><b>Green cleaning</b>Products used in every home</div>
       </div>
     </div>
 
