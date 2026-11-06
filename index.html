@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best Home Cleaning &amp; Maid Services Calgary | Cozy Home Maid Service Inc.</title>
+<meta name="description" content="Simple, trusted and convenient house cleaning and maid services in Calgary and Edmonton. Licensed, WCB/WSIB covered, insured and bonded. Green cleaning products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cocoa:#3d1a0b;
+  --brown:#54250f;
+  --rust:#994c2c;
+  --clay:#c47a52;
+  --leaf:#86c500;
+  --leaf-d:#5f8f00;
+  --cream:#faf4ea;
+  --sand:#f1e5d3;
+  --linen:#fffdf9;
+  --ink:#2b211c;
+  --muted:#6f6158;
+  --line:#e6d8c4;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.serif{font-family:'Young Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.12}
+.wrap{width:min(1220px,92vw);margin-inline:auto}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid transparent;cursor:pointer;transition:.25s;font-family:inherit}
+.btn-leaf{background:var(--leaf);color:var(--cocoa)}
+.btn-leaf:hover{background:#97d915;transform:translateY(-2px)}
+.btn-line{border-color:currentColor}
+.btn-line:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+
+/* ===== top note ===== */
+.note{background:var(--cocoa);color:#f4e6d6;font-size:14px}
+.note .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0}
+.note b{color:var(--leaf)}
+.note .cities{display:flex;gap:18px;opacity:.8}
+.note .cities a:hover{color:var(--leaf)}
+
+/* ===== header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:86px}
+header .logo img{height:62px;width:auto}
+nav ul{display:flex;gap:24px;list-style:none;font-weight:600;font-size:15px;white-space:nowrap}
+nav a{position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--leaf);transition:.25s}
+nav a:hover::after{width:100%}
+.head-cta{display:flex;align-items:center;gap:16px}
+.call{display:flex;flex-direction:column;line-height:1.15;text-align:right}
+.call small{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.call strong{font-size:19px;color:var(--brown);white-space:nowrap}
+.head-cta .btn{white-space:nowrap;padding:13px 22px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--brown);margin:7px 8px;border-radius:2px}
+
+/* ===== HERO: welcome mat + estimator ===== */
+.hero{position:relative;background:var(--cream);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -55% auto;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(134,197,0,.14),transparent 65%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;padding:70px 0 90px;align-items:start}
+.hero h1{font-size:clamp(40px,5.2vw,70px);color:var(--cocoa);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--rust);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-10px;width:100%;height:16px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:540px}
+.trust-line{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 34px}
+.trust-line span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:var(--brown)}
+.trust-line span i{width:8px;height:8px;border-radius:50%;background:var(--leaf)}
+.hero-photo{position:relative;margin-top:8px}
+.hero-photo .frame{position:relative;border-radius:var(--r);overflow:hidden;clip-path:polygon(0 0,100% 0,100% 82%,88% 100%,0 100%);aspect-ratio:16/10;box-shadow:0 30px 60px -30px rgba(61,26,11,.45)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo .tag{position:absolute;left:22px;bottom:22px;background:var(--cocoa);color:#fff;padding:12px 18px;border-radius:10px;font-size:14px}
+.hero-photo .tag b{display:block;font-family:'Young Serif',serif;font-weight:400;font-size:20px;color:var(--leaf)}
+
+/* estimator card */
+.estimator{position:sticky;top:110px;background:#fff;border-radius:22px;padding:34px;box-shadow:0 40px 80px -40px rgba(61,26,11,.4),0 0 0 1px var(--line);position:relative}
+.estimator::before{content:"";position:absolute;top:-14px;left:34px;width:84px;height:28px;background:var(--leaf);border-radius:6px;transform:rotate(-3deg)}
+.estimator h2{font-size:30px;color:var(--cocoa);margin:8px 0 6px}
+.estimator .sub{color:var(--muted);font-size:15px;margin-bottom:24px}
+.field{margin-bottom:20px}
+.field>label{display:block;font-weight:700;font-size:14px;margin-bottom:9px;color:var(--brown)}
+.svc-pick{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.svc-pick button,.chips button{font-family:inherit;background:var(--cream);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left;transition:.2s}
+.svc-pick button small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.svc-pick button.on,.chips button.on{background:var(--brown);border-color:var(--brown);color:#fff}
+.svc-pick button.on small{color:#e9cdb9}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips button{border-radius:999px;padding:8px 14px;font-size:13.5px}
+.hours{display:flex;align-items:center;gap:16px}
+.hours input{flex:1;accent-color:var(--rust)}
+.hours output{min-width:78px;text-align:center;background:var(--sand);border-radius:8px;padding:6px 10px;font-weight:800;color:var(--brown)}
+.total{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;border-top:1.5px dashed var(--line);padding-top:20px;margin-top:6px}
+.total .num{white-space:nowrap;font-family:'Young Serif',serif;font-size:46px;color:var(--cocoa);line-height:1}
+.total .num small{font-family:'Figtree';font-size:15px;color:var(--muted)}
+.total p{font-size:13px;color:var(--muted);max-width:210px}
+.estimator .btn{width:100%;justify-content:center;margin-top:20px}
+
+/* ===== ROOM INDEX (service navigation) ===== */
+.rooms{padding:110px 0 100px}
+.rooms-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px}
+.rooms-head h2{font-size:clamp(32px,3.6vw,50px);color:var(--cocoa);max-width:640px;margin-top:12px}
+.rooms-head p{max-width:380px;color:var(--muted)}
+.room-index{display:grid;grid-template-columns:360px 1fr;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
+.room-list{list-style:none;border-right:1px solid var(--line)}
+.room-list li{border-bottom:1px solid var(--line)}
+.room-list li:last-child{border-bottom:0}
+.room-list button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:14px;padding:22px 26px;cursor:pointer;transition:.2s}
+.room-list .n{font-family:'Young Serif',serif;color:var(--clay);font-size:15px}
+.room-list .t{font-weight:700;font-size:17px}
+.room-list .t small{display:block;font-weight:500;font-size:13.5px;color:var(--muted)}
+.room-list .arr{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);transition:.2s;font-size:14px}
+.room-list button:hover{background:var(--cream)}
+.room-list button.on{background:var(--brown);color:#fff}
+.room-list button.on .t small{color:#e9cdb9}
+.room-list button.on .n{color:var(--leaf)}
+.room-list button.on .arr{background:var(--leaf);border-color:var(--leaf);color:var(--cocoa)}
+.room-stage{position:relative;min-height:560px}
+.room-panel{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;opacity:0;visibility:hidden;transition:opacity .45s}
+.room-panel.on{opacity:1;visibility:visible}
+.room-panel .img{position:relative;overflow:hidden}
+.room-panel .img img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.2s}
+.room-panel.on .img img{transform:scale(1)}
+.room-panel .price-pin{position:absolute;top:22px;right:22px;background:#fff;border-radius:12px;padding:10px 16px;text-align:right;box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.room-panel .price-pin b{font-family:'Young Serif',serif;font-weight:400;font-size:28px;color:var(--rust);display:block;line-height:1}
+.room-panel .price-pin small{font-size:12px;color:var(--muted);font-weight:600}
+.room-panel .copy{padding:30px 36px 34px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.room-panel h3{font-size:30px;color:var(--cocoa);margin-bottom:8px}
+.room-panel .copy p{color:var(--muted);max-width:560px}
+.room-panel .copy .btn{background:var(--cocoa);color:#fff}
+.room-panel .copy .btn:hover{background:var(--rust)}
+.gift-panel .img{background:var(--sand);display:grid;place-items:center}
+.gift-card{width:min(440px,80%);aspect-ratio:1.6;background:linear-gradient(135deg,var(--brown),var(--rust));border-radius:18px;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 60px -30px rgba(61,26,11,.6);transform:rotate(-4deg);position:relative;overflow:hidden}
+.gift-card::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:26px solid rgba(134,197,0,.5)}
+.gift-card .serif{font-size:30px}
+.gift-card small{opacity:.8;letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:700}
+
+/* ===== WHO WE ARE: editorial band ===== */
+.who{background:var(--cocoa);color:#f4e6d6;position:relative;overflow:hidden}
+.who .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:110px 0;align-items:center}
+.who .eyebrow{color:var(--leaf)}
+.who h2{font-size:clamp(34px,3.8vw,52px);color:#fff;margin:14px 0 22px}
+.who p{color:#dcc6b3;margin-bottom:16px}
+.who .stack{position:relative;height:520px}
+.who .stack .a{position:absolute;inset:0 18% 22% 0;border-radius:6px;overflow:hidden;transform:rotate(-2deg);border:10px solid #fff;box-shadow:0 30px 50px -20px #000}
+.who .stack .b{position:absolute;right:0;bottom:0;width:58%;aspect-ratio:4/3;border-radius:6px;overflow:hidden;transform:rotate(3deg);border:10px solid #fff;box-shadow:0 30px 50px -20px #000}
+.who .stack img{width:100%;height:100%;object-fit:cover}
+.creds{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:34px;border-top:1px solid rgba(255,255,255,.15)}
+.creds div{padding:18px 8px 0 0;font-size:14px;font-weight:600;color:#fff}
+.creds div b{display:block;width:26px;height:26px;border-radius:7px;background:var(--leaf);color:var(--cocoa);display:grid;place-items:center;margin-bottom:10px;font-size:14px}
+
+/* ===== PRICE CARD (receipt) ===== */
+.rates{padding:110px 0;background:var(--cream)}
+.rates .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.rates h2{font-size:clamp(32px,3.6vw,48px);color:var(--cocoa);margin:14px 0 20px}
+.rates p{color:var(--muted);margin-bottom:26px}
+.receipt{background:#fff;padding:40px 42px 34px;position:relative;box-shadow:0 30px 60px -35px rgba(61,26,11,.45);
+  -webkit-mask:radial-gradient(circle 10px at 50% 100%,#0000 98%,#000) 50% 100%/26px 100% repeat-x;mask:radial-gradient(circle 10px at 50% 100%,#0000 98%,#000) bottom/26px 100% repeat-x}
+.receipt .r-head{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--cocoa);padding-bottom:16px;margin-bottom:8px}
+.receipt .r-head img{height:44px}
+.receipt .r-head span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:22px 0;border-bottom:1.5px dashed var(--line)}
+.row h3{font-family:'Figtree';font-weight:800;font-size:19px;color:var(--brown)}
+.row p{margin:4px 0 0;font-size:14.5px}
+.row .amt{font-family:'Young Serif',serif;font-size:42px;color:var(--rust);line-height:1;text-align:right}
+.row .amt small{display:block;font-family:'Figtree';font-size:13px;color:var(--muted);font-weight:600}
+.row .amt.free{font-size:26px;padding-top:6px}
+.receipt ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;padding:22px 0 6px}
+.receipt li{font-size:14.5px;font-weight:600;display:flex;gap:9px;align-items:flex-start}
+.receipt li::before{content:"✓";color:var(--leaf-d);font-weight:800}
+
+/* ===== BOOK (online booking flow) ===== */
+.book{padding:110px 0}
+.book .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:0;border-radius:28px;overflow:hidden;background:var(--sand)}
+.book .side{position:relative;padding:54px 48px;background:var(--leaf);color:var(--cocoa);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.book .side h2{font-size:clamp(32px,3.4vw,46px)}
+.book .side .eyebrow{color:var(--cocoa);opacity:.7}
+.book .side p{font-weight:500}
+.book .side .line{border-top:2px solid rgba(61,26,11,.25);padding-top:22px}
+.book .side .line a{display:block;font-family:'Young Serif',serif;font-size:32px}
+.book .side .line small{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.book form{padding:50px 48px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.book form .full{grid-column:1/-1}
+.book label{display:block;font-size:13.5px;font-weight:700;color:var(--brown);margin-bottom:7px}
+.book input,.book select,.book textarea{width:100%;font-family:inherit;font-size:15.5px;padding:13px 15px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--rust)}
+.book textarea{min-height:96px;resize:vertical}
+.book .chips button{background:#fff}
+.book .chips button.on{background:var(--brown);color:#fff}
+.book .btn{background:var(--cocoa);color:#fff;justify-content:center}
+.book .btn:hover{background:var(--rust)}
+.book .thanks{display:none;grid-column:1/-1;background:#fff;border-radius:12px;padding:16px 18px;font-weight:600;color:var(--leaf-d)}
+
+/* ===== AWARDS shelf ===== */
+.awards{padding:20px 0 110px}
+.shelf{display:grid;grid-template-columns:300px 1fr;gap:50px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
+.shelf h2{font-size:34px;color:var(--cocoa);margin-top:10px}
+.badges{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.badges img{height:104px;width:auto;transition:.3s}
+.badges img:hover{transform:translateY(-6px) rotate(-3deg)}
+.badges .bw{height:50px;padding:0 4px}
+
+/* ===== LOCATIONS: Calgary first ===== */
+.where{padding:0 0 110px}
+.where .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.home-city{background:var(--brown);color:#fff;border-radius:24px;padding:50px;position:relative;overflow:hidden;min-height:400px;display:flex;flex-direction:column;justify-content:space-between}
+.home-city::after{content:"YYC";position:absolute;right:-20px;bottom:-60px;font-family:'Young Serif',serif;font-size:260px;color:rgba(255,255,255,.06);line-height:1}
+.home-city .eyebrow{color:var(--leaf)}
+.home-city h2{font-size:clamp(34px,3.6vw,52px);margin:14px 0 14px}
+.home-city p{color:#e9cdb9;max-width:460px}
+.home-city .nums{display:flex;gap:40px;flex-wrap:wrap;position:relative;z-index:1}
+.home-city .nums a{font-family:'Young Serif',serif;font-size:30px;display:block}
+.home-city .nums small{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf)}
+.other{border:1px solid var(--line);border-radius:24px;padding:40px;background:#fff}
+.other h3{font-size:26px;color:var(--cocoa);margin-bottom:6px}
+.other>p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.other ul{list-style:none}
+.other li{display:flex;justify-content:space-between;align-items:center;padding:17px 0;border-bottom:1px solid var(--line);gap:16px}
+.other li:last-child{border-bottom:0}
+.other li span{font-weight:700}
+.other li span small{display:block;font-weight:500;color:var(--muted);font-size:13px}
+.other li a{font-weight:700;color:var(--rust);white-space:nowrap}
+.other li a:hover{color:var(--brown)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--cocoa);color:#d9c3b0;font-size:15px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:80px 0 50px}
+.foot-top .logo-pill{background:#fff;border-radius:14px;padding:12px 16px;display:inline-block;margin-bottom:18px}
+.foot-top .logo-pill img{height:52px}
+footer h4{font-family:'Figtree';font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a:hover{color:#fff}
+.social{display:flex;gap:10px;margin-top:20px}
+.social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center}
+.social a:hover{background:var(--leaf);border-color:var(--leaf);color:var(--cocoa)}
+.social svg{width:17px;height:17px;fill:currentColor}
+.foot-bot{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
+.foot-bot a{color:var(--leaf);font-weight:700}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ===== responsive ===== */
+@media(max-width:1320px){
+  nav ul{gap:18px;font-size:14.5px}
+  .call{display:none}
+}
+@media(max-width:1080px){
+  nav{position:fixed;inset:86px 0 auto 0;background:var(--linen);border-bottom:1px solid var(--line);padding:16px 4vw 24px;display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:6px;font-size:17px}
+  .burger{display:block}
+  .note .cities{display:none}
+}
+@media(max-width:980px){
+  .head-cta .btn{display:none}
+  .hero .wrap,.who .wrap,.rates .wrap,.book .wrap,.where .wrap,.shelf{grid-template-columns:1fr}
+  .hero .wrap{gap:40px;padding:50px 0 70px}
+  .estimator{position:relative;top:0}
+  .room-index{grid-template-columns:1fr}
+  .room-list{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .room-list li{border-bottom:0;border-right:1px solid var(--line);flex:0 0 auto}
+  .room-list button{grid-template-columns:auto 1fr;padding:16px 20px}
+  .room-list .arr{display:none}
+  .room-stage{min-height:600px}
+  .rooms-head{flex-direction:column;align-items:start;gap:14px}
+  .who .stack{height:420px}
+  .creds{grid-template-columns:repeat(3,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .badges{justify-content:flex-start}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .estimator{padding:26px 20px;position:relative;top:0}
+  .room-panel .copy{grid-template-columns:1fr;padding:24px}
+  .room-panel h3{font-size:25px}
+  .receipt{padding:30px 22px}
+  .receipt ul{grid-template-columns:1fr}
+  .book form{grid-template-columns:1fr;padding:34px 22px}
+  .book .side{padding:40px 24px}
+  .home-city,.other{padding:32px 24px}
+  .foot-top{grid-template-columns:1fr}
+  .badges img{height:84px}
+  .creds{grid-template-columns:1fr 1fr}
+  .total .num{font-size:38px}
+}
+</style>
+</head>
+<body>
+
+<div class="note">
+  <div class="wrap">
+    <div>Licensed, WCB/WSIB covered, insured and bonded. <b>Green cleaning products.</b></div>
+    <div class="cities"><a href="#where">Calgary</a><a href="#where">Edmonton</a><a href="#where">Ottawa</a><a href="#where">Regina</a><a href="#where">Halifax</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo"><img src="images/logo.png" alt="Cozy Home Maid Service Inc."></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#who">About us</a></li>
+        <li><a href="#services">Residential</a></li>
+        <li><a href="#services">Commercial</a></li>
+        <li><a href="#rates">Pricing</a></li>
+        <li><a href="#services" data-room="5">Gift Certificate</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#book">Contact us</a></li>
+      </ul>
+    </nav>
+    <div class="head-cta">
+      <a class="call" href="tel:5879302227"><small>Calgary</small><strong>(587) 930-2227</strong></a>
+      <a href="#book" class="btn btn-leaf">Get A Free Quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Calgary &amp; Edmonton House Cleaning</span>
+      <h1>Best Home &amp; Maid Cleaning Services in <em>Calgary<svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M2 12 C 50 2, 120 2, 198 9" stroke="#86c500" stroke-width="5" fill="none" stroke-linecap="round"/></svg></em> and Edmonton</h1>
+      <p class="lead">Choose Cozy Home Maid for simple, trusted and the most convenient house cleaning services in Calgary and Edmonton.</p>
+      <div class="trust-line">
+        <span><i></i>Licensed</span><span><i></i>WCB/WSIB covered</span><span><i></i>Insured &amp; bonded</span><span><i></i>We bring our own products</span>
+      </div>
+      <div class="hero-photo">
+        <div class="frame"><img src="images/hero-cozy-living-room.jpg" onerror="this.onerror=null;this.src='images/house-cleaning-regina.png'" alt="Freshly cleaned living room"></div>
+        <div class="tag"><b>From $37/hr</b>Regular residential cleaning</div>
+      </div>
+    </div>
+
+    <aside class="estimator" id="estimate">
+      <span class="eyebrow">Quick estimate</span>
+      <h2>What will my clean cost?</h2>
+      <p class="sub">Pick a service and hours to see your Calgary estimate. Supplies included.</p>
+      <div class="field">
+        <label>Service</label>
+        <div class="svc-pick" id="svc">
+          <button type="button" class="on" data-rate="37">Regular cleaning<small>$37 / hour</small></button>
+          <button type="button" data-rate="45">One-time / initial<small>$45 / hour</small></button>
+          <button type="button" data-rate="45">Move-in / move-out<small>$45 / hour</small></button>
+          <button type="button" data-rate="45">Post-construction<small>$45 / hour</small></button>
+        </div>
+      </div>
+      <div class="field">
+        <label>How often?</label>
+        <div class="chips" id="freq">
+          <button type="button">Weekly</button><button type="button" class="on">Bi-weekly</button><button type="button">Every 3 weeks</button><button type="button">Monthly</button><button type="button">One-time</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="hrs">Hours per visit</label>
+        <div class="hours"><input type="range" id="hrs" min="2" max="8" step="1" value="3"><output id="hrsOut">3 hrs</output></div>
+      </div>
+      <div class="total">
+        <div class="num" id="tot">$111<small> / visit</small></div>
+        <p>Estimate only. Customized home cleaning plans available on request.</p>
+      </div>
+      <a href="#book" class="btn btn-leaf" id="estBtn">Book this clean</a>
+    </aside>
+  </div>
+</section>
+
+<!-- SERVICES ROOM INDEX -->
+<section class="rooms" id="services">
+  <div class="wrap">
+    <div class="rooms-head rv">
+      <div>
+        <span class="eyebrow">Our cleaning solutions</span>
+        <h2>Our unique residential and commercial cleaning solutions make us different from the rest</h2>
+      </div>
+      <p>Get your space professionally cleaned by our staff. Choose a service to see what it covers and what it costs.</p>
+    </div>
+
+    <div class="room-index rv">
+      <ul class="room-list" id="roomList">
+        <li><button class="on" data-i="0"><span class="n">01</span><span class="t">Residential maid<small>Weekly, bi-weekly, occasional</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="1"><span class="n">02</span><span class="t">Recurring cleaning<small>Every visit on your schedule</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="2"><span class="n">03</span><span class="t">One-time cleaning<small>Initial and occasional cleans</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="3"><span class="n">04</span><span class="t">Move-in / move-out<small>Hand over or settle in clean</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="4"><span class="n">05</span><span class="t">Post-construction<small>After the builders leave</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="6"><span class="n">06</span><span class="t">Commercial &amp; office<small>Offices, retail, apartments</small></span><span class="arr">→</span></button></li>
+        <li><button data-i="5"><span class="n">07</span><span class="t">Gift certificates<small>Give the gift of a clean home</small></span><span class="arr">→</span></button></li>
+      </ul>
+
+      <div class="room-stage">
+        <article class="room-panel on">
+          <div class="img"><img src="images/service-residential-maid.jpg" onerror="this.onerror=null;this.src='images/sl1.jpg'" alt="Residential maid service"><div class="price-pin"><b>$37/hr</b><small>Supplies included</small></div></div>
+          <div class="copy"><div><h3>Professional residential cleaning</h3><p>Regular weekly, bi-weekly or occasional house cleaning by our professional staff, using green cleaning products in every room.</p></div><a href="#book" class="btn">Book now</a></div>
+        </article>
+        <article class="room-panel">
+          <div class="img"><img src="images/service-recurring-cleaning.jpg" onerror="this.onerror=null;this.src='images/house-cleaning-regina.png'" alt="Recurring home cleaning"><div class="price-pin"><b>$37/hr</b><small>Regular rate</small></div></div>
+          <div class="copy"><div><h3>Recurring cleaning plans</h3><p>Daily, weekly, bi-weekly, every 3 weeks or monthly. Customized home cleaning plans are available on request.</p></div><a href="#book" class="btn">Set my schedule</a></div>
+        </article>
+        <article class="room-panel">
+          <div class="img"><img src="images/service-one-time-cleaning.jpg" onerror="this.onerror=null;this.src='images/about.jpeg'" alt="One-time deep cleaning"><div class="price-pin"><b>$45/hr</b><small>Initial &amp; one-time</small></div></div>
+          <div class="copy"><div><h3>One-time cleaning</h3><p>An initial, occasional or one-time deep clean when your home needs a reset. We bring our own cleaning products.</p></div><a href="#book" class="btn">Book a one-time clean</a></div>
+        </article>
+        <article class="room-panel">
+          <div class="img"><img src="images/service-move-in-out.jpg" onerror="this.onerror=null;this.src='images/house-cleaning-regina.png'" alt="Move-in move-out cleaning"><div class="price-pin"><b>$45/hr</b><small>Move-in / move-out</small></div></div>
+          <div class="copy"><div><h3>Move-in &amp; move-out cleaning</h3><p>Moving in or moving out, we clean the space top to bottom so you can hand over the keys or settle in with confidence.</p></div><a href="#book" class="btn">Book a move clean</a></div>
+        </article>
+        <article class="room-panel">
+          <div class="img"><img src="images/service-post-construction.jpg" onerror="this.onerror=null;this.src='images/sl3.jpg'" alt="Post-construction cleaning"><div class="price-pin"><b>$45/hr</b><small>Post-construction</small></div></div>
+          <div class="copy"><div><h3>Post-construction cleaning</h3><p>After a build or renovation, our team clears the dust and leaves the space ready to live or work in.</p></div><a href="#book" class="btn">Request this clean</a></div>
+        </article>
+        <article class="room-panel gift-panel">
+          <div class="img"><div class="gift-card"><small>Cozy Home Maid</small><div class="serif">Gift Certificate</div><small>A clean home, gifted</small></div></div>
+          <div class="copy"><div><h3>Gift certificates</h3><p>Give someone you care about a professionally cleaned home. Ask us about Cozy Home Maid gift certificates.</p></div><a href="#book" class="btn">Ask about gifts</a></div>
+        </article>
+        <article class="room-panel">
+          <div class="img"><img src="images/service-commercial-office.jpg" onerror="this.onerror=null;this.src='images/sl3.jpg'" alt="Office and commercial cleaning"><div class="price-pin"><b>Free</b><small>No-obligation quote</small></div></div>
+          <div class="copy"><div><h3>Office &amp; commercial cleaning</h3><p>Janitorial and cleaning for offices, retail outlets, apartment buildings and other commercial spaces.</p></div><a href="#book" class="btn">Get a free quote</a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="who" id="who">
+  <div class="wrap">
+    <div class="stack rv">
+      <div class="a"><img src="images/about.jpeg" alt="Cozy Home Maid cleaner wiping a bathroom mirror"></div>
+      <div class="b"><img src="images/about-green-products.jpg" onerror="this.onerror=null;this.src='images/sl1.jpg'" alt="Green cleaning products"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Who we are?</span>
+      <h2>Most trusted Calgary and Edmonton house cleaning and maid services</h2>
+      <p>Cozy Home Maid Service Inc. offers simple, trusted and convenient residential and commercial cleaning across Calgary and Edmonton, with teams also serving Ottawa, Regina and Halifax.</p>
+      <p>We use green cleaning products and bring our own supplies, so all you need to do is open the door.</p>
+      <div class="creds">
+        <div><b>✓</b>Licensed</div>
+        <div><b>✓</b>WCB/WSIB covered</div>
+        <div><b>✓</b>Insured</div>
+        <div><b>✓</b>Bonded</div>
+        <div><b>✓</b>Green products</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RATES -->
+<section class="rates" id="rates">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Calgary pricing</span>
+      <h2>Honest hourly rates, everything included</h2>
+      <p>No guesswork. Pick your service, choose your hours and use the estimator to see what your visit will cost. Commercial spaces get a free, no-obligation quote.</p>
+      <a href="#estimate" class="btn btn-line" style="color:var(--brown)">Open the estimator</a>
+    </div>
+    <div class="receipt rv">
+      <div class="r-head"><img src="images/logo.png" alt="Cozy Home Maid"><span>Calgary rates</span></div>
+      <div class="row"><div><h3>Regular residential cleaning</h3><p>Weekly, bi-weekly, every 3 weeks or monthly visits.</p></div><div class="amt">$37<small>per hour</small></div></div>
+      <div class="row"><div><h3>Move-in/out, post-construction, initial &amp; one-time</h3><p>Deeper cleans that need extra time and care.</p></div><div class="amt">$45<small>per hour</small></div></div>
+      <div class="row"><div><h3>Office &amp; commercial</h3><p>Offices, retail outlets, apartment buildings and more.</p></div><div class="amt free">Free quote</div></div>
+      <ul>
+        <li>We bring our own cleaning products</li>
+        <li>Green cleaning products</li>
+        <li>Customized plans on request</li>
+        <li>Licensed, insured &amp; bonded staff</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book" id="book">
+  <div class="wrap rv">
+    <div class="side">
+      <div>
+        <span class="eyebrow">Get a free quote</span>
+        <h2 style="margin-top:12px">Book your Calgary clean online</h2>
+        <p style="margin-top:14px">Tell us about your space and how often you want us there. We will confirm your booking and quote.</p>
+      </div>
+      <div class="line">
+        <small>Calgary bookings</small>
+        <a href="tel:5879302227">(587) 930-2227</a>
+        <a href="mailto:CozyHomeMaid@gmail.com" style="font-family:Figtree;font-size:16px;font-weight:700;margin-top:6px">CozyHomeMaid@gmail.com</a>
+      </div>
+    </div>
+    <form id="bookForm">
+      <div class="full">
+        <label>How often do you need us?</label>
+        <div class="chips" id="bFreq">
+          <button type="button">Daily</button><button type="button">Weekly</button><button type="button" class="on">Bi-weekly</button><button type="button">Every 3 weeks</button><button type="button">Monthly</button><button type="button">One-time deep clean</button><button type="button">Move-in/move-out</button>
+        </div>
+      </div>
+      <div><label for="bName">Name</label><input id="bName" required></div>
+      <div><label for="bPhone">Phone</label><input id="bPhone" type="tel" required></div>
+      <div><label for="bEmail">Email</label><input id="bEmail" type="email" required></div>
+      <div><label for="bCity">City</label>
+        <select id="bCity"><option>Calgary</option><option>Edmonton</option><option>Ottawa</option><option>Regina</option><option>Halifax</option></select></div>
+      <div class="full"><label for="bType">Service</label>
+        <select id="bType"><option>Residential maid cleaning</option><option>One-time cleaning</option><option>Move-in / move-out cleaning</option><option>Post-construction cleaning</option><option>Office &amp; commercial cleaning</option><option>Gift certificate</option></select></div>
+      <div class="full"><label for="bMsg">Tell us about your space</label><textarea id="bMsg"></textarea></div>
+      <div class="full"><button class="btn" type="submit">Send my request</button></div>
+      <div class="thanks" id="thanks">Thank you! Your email app is opening with your request.</div>
+    </form>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="awards">
+  <div class="wrap">
+    <div class="shelf rv">
+      <div><span class="eyebrow">Achievements &amp; partnerships</span><h2>Recognized year after year</h2></div>
+      <div class="badges">
+        <img src="images/house_cleaning_services-edmonton-2018-clr.svg" alt="Three Best Rated 2018">
+        <img src="images/house_cleaning_services-edmonton-2019-clr.svg" alt="Three Best Rated 2019">
+        <img src="images/house_cleaning_services-edmonton-2020-clr.svg" alt="Three Best Rated 2020">
+        <img src="images/house_cleaning_services-edmonton-2021-clr.svg" alt="Three Best Rated 2021">
+        <img src="images/house_cleaning_services-edmonton-2022-clr.svg" alt="Three Best Rated 2022">
+        <img class="bw" src="images/boardwalk-award.png" alt="Calgary Boardwalk award">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="where" id="where">
+  <div class="wrap">
+    <div class="home-city rv">
+      <div>
+        <span class="eyebrow">Servicing locations</span>
+        <h2>Calgary, Alberta</h2>
+        <p>Our home base. Residential, recurring, one-time, move-in/out, post-construction and commercial cleaning across the city.</p>
+      </div>
+      <div class="nums">
+        <div><small>Calgary bookings</small><a href="tel:5879302227">(587) 930-2227</a></div>
+        <div><small>Calgary office</small><a href="tel:4038916243">(403) 891-6243</a></div>
+      </div>
+    </div>
+    <div class="other rv">
+      <h3>Other cities</h3>
+      <p>Outside Calgary? Call your local Cozy Home Maid team.</p>
+      <ul>
+        <li><span>Edmonton<small>Alberta</small></span><a href="tel:7807612699">(780) 761-2699</a></li>
+        <li><span>Ottawa<small>Nepean, Kanata, Ontario</small></span><a href="tel:6132860959">(613) 286-0959</a></li>
+        <li><span>Regina<small>Saskatchewan</small></span><a href="tel:3065966243">(306) 596-6243</a></li>
+        <li><span>Halifax<small>Nova Scotia</small></span><a href="tel:9029996243">(902) 999-6243</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo-pill"><img src="images/logo.png" alt="Cozy Home Maid Service Inc."></div>
+        <p>Simple, trusted and convenient house cleaning services in Calgary and Edmonton. Licensed, WCB/WSIB covered, insured and bonded.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.7 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9L17.7 3zm-1.1 16.2h1.7L7.5 4.7H5.7l10.9 14.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Residential</a></li><li><a href="#services">One-time cleaning</a></li><li><a href="#services">Move-in / move-out</a></li><li><a href="#services">Post-construction</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">Gift Certificate</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#who">About us</a></li><li><a href="#rates">Pricing</a></li><li><a href="#">Blog</a></li><li><a href="#book">Contact us</a></li><li><a href="#book">Get A Free Quote</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:5879302227">Calgary (587) 930-2227</a></li><li><a href="tel:7807612699">Edmonton (780) 761-2699</a></li><li><a href="mailto:CozyHomeMaid@gmail.com">CozyHomeMaid@gmail.com</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> Cozy Home Maid Service Inc. All rights reserved.</span>
+      <span><a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// estimator
+const svc=[...document.querySelectorAll('#svc button')],hrs=document.getElementById('hrs');
+let rate=37;
+function calc(){document.getElementById('hrsOut').textContent=hrs.value+' hrs';document.getElementById('tot').innerHTML='$'+(rate*hrs.value)+'<small> / visit</small>'}
+svc.forEach(b=>b.onclick=()=>{svc.forEach(x=>x.classList.remove('on'));b.classList.add('on');rate=+b.dataset.rate;calc()});
+hrs.oninput=calc;calc();
+function chipGroup(id){const c=[...document.querySelectorAll('#'+id+' button')];c.forEach(b=>b.onclick=()=>{c.forEach(x=>x.classList.remove('on'));b.classList.add('on')})}
+chipGroup('freq');chipGroup('bFreq');
+
+// service room index
+const rb=[...document.querySelectorAll('#roomList button')],panels=[...document.querySelectorAll('.room-panel')];
+function showRoom(i){rb.forEach(b=>b.classList.toggle('on',+b.dataset.i===i));panels.forEach((p,k)=>p.classList.toggle('on',k===i))}
+rb.forEach(b=>b.onclick=()=>showRoom(+b.dataset.i));
+document.querySelectorAll('[data-room]').forEach(a=>a.addEventListener('click',()=>showRoom(+a.dataset.room)));
+
+// booking (opens email)
+document.getElementById('bookForm').onsubmit=e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value, f=document.querySelector('#bFreq .on').textContent;
+  const body=`Name: ${v('bName')}\nPhone: ${v('bPhone')}\nEmail: ${v('bEmail')}\nCity: ${v('bCity')}\nService: ${v('bType')}\nFrequency: ${f}\n\n${v('bMsg')}`;
+  location.href='mailto:CozyHomeMaid@gmail.com?subject='+encodeURIComponent('Free quote request: '+v('bType'))+'&body='+encodeURIComponent(body);
+  document.getElementById('thanks').style.display='block';
+};
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
